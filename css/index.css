@@ -25,6 +25,42 @@ body {
   padding: 3rem;
   background: rgba(184, 227, 232, 0.878);
 }
+/*Login Page*/
+#myHeader {
+	position: relative;
+	height: 95vh;
+	background-image: linear-gradient(to right, rgba(33, 75, 187, 0.5), rgba(33, 75, 187, 0.85)),
+	 url(../images/bgs/controller3.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+
+}
+.loginformspace {
+	text-align: center;
+	width: 50%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #DCE3F4;
+	padding: 30px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+.form-top{
+	font-family:'Grandstander', sans-serif;
+	font-weight: bold;
+	font-size: 18px;
+}
+.form-top-primary{
+	display: block;
+}
+.form-top-main{
+	display: block;
+}
+
 #intro {
   margin-bottom: 10rem;
 }
@@ -87,4 +123,16 @@ body {
   margin-top: 2rem;
   padding: 1.2rem;
   text-align: center;
+}
+
+/*Media Queries*/
+@media (min-width: 320px) and (max-width: 480px) {
+    .loginformspace {
+    width: 90%;
+    padding: 5px;
+    font-size: 10px;
+    }
+    form-top {
+        font-size: 9px;
+    }
 }
