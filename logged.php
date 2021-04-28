@@ -57,18 +57,18 @@ include 'scripts/check_session.php';
             <section id="intro">
                 <header id="cusHeader">
                     <h3 class="heading">
-                        <span class="heading-main">Welcome To BH Entertainment</span>
+                        <span class="heading-main">Welcome To BH Entertainment, <?php echo $disp_name; ?></span>
                         <span class="heading-primary">Time Spent Enjoying Yourself, is not Time Wasted!</span>
                     </h3>
                     <div class="row" id="customer-prev">
                         <div class="col-md-4 col-lg-4 col-sm-4">
-                            XXX Played Games
+                            <?php include 'scripts/played_games.php';; ?> Played Games
                         </div><!--.column-->
                         <div class="col-md-4 col-lg-4 col-sm-4">
-                            XXX Won Games
+                            <?php include 'scripts/won_games.php';; ?> Won Games
                         </div><!--.column-->
                         <div class="col-md-4 col-lg-4 col-sm-4">
-                            XXX Lost Games
+                            <?php include 'scripts/lost_games.php';; ?> Lost Games
                         </div><!--.column-->
                     </div><!--.row-->
                 </header>

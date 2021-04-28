@@ -5,17 +5,17 @@ $output = '';
 if(isset($_POST['log'])){
     //get the fata from the form fields
     $uname = mysqli_real_escape_string($connect, $_POST['jina']);
-    $pwd = mysqli_real_escape_string($connect, $_POST['siri']);
+    $pass = mysqli_real_escape_string($connect, $_POST['siri']);
 
     //check for empty fields
-    if(empty($uname) || empty($pwd)){
+    if(empty($uname) || empty($pass)){
     	$output = "<script>";
     	$output.= "alert('Huwezi Peana Form Bila Shit. Jaza Yote! Ala!')";
     	$output .= "</script>";
 
     	echo $output;
     }else{
-    	$sql = "SELECT * FROM users WHERE username = '$uname' AND password = '$pwd'";
+    	$sql = "SELECT * FROM users WHERE username = '$uname' AND pwd = '$pass'";
     	$check = mysqli_query($connect, $sql);
 
     	if (mysqli_num_rows($check) > 0) {
