@@ -1,3 +1,6 @@
+<?php
+include 'scripts/login.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +9,10 @@
 	<title>Broad Horizons Ent | Admin Login </title>
 	<!--/Precoded CSS files-->
 	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/fontawesome.css">
+	<link rel="stylesheet" href="css/all.css">
+	<link rel="stylesheet" href="css/regular.css">
+	<link rel="stylesheet" href="css/solid.css">
 	<link rel="stylesheet" href="css/index.css">
 	
 </head>
@@ -23,14 +30,14 @@
 				<span class="form-top-primary">Broad Horizons Ent <i class="fa fa-user"></i></span>
 				<span class="form-top-main">Customer Login</span>
 			</div><!--.form-top/-->
-			<form action="index.php" id="admin-login" method="POST">
+			<form action="index.php" id="customer-login" method="POST">
 				<div class="form-group">
 					<label for="uname">UserName:</label>
-					<input type="text" class="form-control" placeholder="Your UserName..." name="username">
+					<input type="text" class="form-control" placeholder="Your UserName..." name="jina">
 				</div>
 				<div class="form-group">
 					<label for="pass">Password:</label>
-					<input type="password" class="form-control" placeholder="Your Password..." name="secret">
+					<input type="password" class="form-control" placeholder="Your Password..." name="siri">
 				</div>
 
 				<button type="submit" class="btn btn-primary" name="log"><i class="fa fa-sign-in-alt"></i>Login</button>

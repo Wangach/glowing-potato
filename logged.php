@@ -1,3 +1,7 @@
+<?php 
+include 'scripts/check_session.php';
+
+ ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customers Page</title>
     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/regular.css">
+    <link rel="stylesheet" href="css/solid.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
@@ -25,15 +33,20 @@
                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
+                  <a class="nav-link" href="#">Transactions <i class="fas fa-dollar-sign"></i></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Matches <i class="fas fa-gamepad"></i></a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Johnito
+                        <?php echo $disp_name; ?>
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                      <a class="dropdown-item" href="#">My Profile</a>
-                      <a class="dropdown-item" href="#">Logout</a>
+                      <a class="dropdown-item" href="#">My Profile <i class="far fa-user"></i></a>
+                      
+                      
+                      <a class="dropdown-item" href="scripts/login.php?logout=1">Logout <i class="fas fa-sign-out-alt"></i></a>
                     </div>
                   </li>
               </ul>
@@ -147,7 +160,7 @@
 
             <footer class="customer-footer">
                 <p>
-                    Made with <i class="glyphicon glyphicon-heart"></i> by Johnito. &copy; 
+                    Made with <i class="far fa-heart"></i> by Johnito. &copy; 
                     <script>
                         let day = new Date;
                         let today  = day.getFullYear();
