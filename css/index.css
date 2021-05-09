@@ -1,18 +1,18 @@
 @font-face {
-	font-family: Grandstander;
-	src: url(../gfonts/Grandstander-VariableFont_wght.ttf);
+  font-family: Grandstander;
+  src: url(../gfonts/Grandstander-VariableFont_wght.ttf);
 }
 @font-face {
-	font-family: Originals;
-	src: url(../gfonts/OriginalSurfer-Regular.ttf);
+  font-family: Originals;
+  src: url(../gfonts/OriginalSurfer-Regular.ttf);
 }
 @font-face {
-	font-family: Jomhuria;
-	src: url(../gfonts/Jomhuria-Regular.ttf);
+  font-family: Jomhuria;
+  src: url(../gfonts/Jomhuria-Regular.ttf);
 }
 @font-face {
-	font-family: Pacifico;
-	src: url(../gfonts/Pacifico-Regular.ttf);
+  font-family: Pacifico;
+  src: url(../gfonts/Pacifico-Regular.ttf);
 }
 /*variables*/
 /*global css*/
@@ -27,38 +27,38 @@ body {
 }
 /*Login Page*/
 #myHeader {
-	position: relative;
-	height: 95vh;
-	background-image: linear-gradient(to right, rgba(33, 75, 187, 0.5), rgba(33, 75, 187, 0.85)),
-	 url(../images/bgs/controller3.jpg);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-	clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  position: relative;
+  height: 95vh;
+  background-image: linear-gradient(to right, rgba(33, 75, 187, 0.5), rgba(33, 75, 187, 0.85)),
+   url(../images/bgs/controller3.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
 
 }
 .loginformspace {
-	text-align: center;
-	width: 50%;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background: #DCE3F4;
-	padding: 30px;
-	border: 1px solid #ccc;
-	border-radius: 5px;
+  text-align: center;
+  width: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #DCE3F4;
+  padding: 30px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 .form-top{
-	font-family:'Grandstander', sans-serif;
-	font-weight: bold;
-	font-size: 18px;
+  font-family:'Grandstander', sans-serif;
+  font-weight: bold;
+  font-size: 18px;
 }
 .form-top-primary{
-	display: block;
+  display: block;
 }
 .form-top-main{
-	display: block;
+  display: block;
 }
 
 #intro {
@@ -127,12 +127,44 @@ body {
 
 /*Media Queries*/
 @media (min-width: 320px) and (max-width: 480px) {
-    .loginformspace {
+  .loginformspace {
     width: 90%;
     padding: 5px;
     font-size: 10px;
-    }
-    form-top {
-        font-size: 9px;
-    }
+  }
+  .form-top {
+      font-size: 9px;
+  }
+  .heading{
+    width: 100%;
+  }
+  .heading-main {
+    font-size: .7rem;
+    color: brown;
+  }
+  .heading-primary {
+    font-size: .7rem;
+  }
+  #customer-prev {
+    width: 100%;
+    bottom: 6rem;
+    
+  }
+  #customer-prev > div > p{
+    font-size: .6rem;
+  }
+
+  /*second section*/
+  #sec {
+  margin-top: 3rem;
+  width: 100%;
+  }
+  .section-heading {
+    font-size: 1rem;
+  }
+  #multichange {
+    width: 100%;
+    font-size: .5rem;
+    margin-left: 0;
+  }
 }

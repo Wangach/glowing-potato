@@ -1,5 +1,5 @@
 <?php 
-include 'scripts/check_session.php';
+include 'scripts/master.php';
 
  ?>
 <!DOCTYPE html>
@@ -44,8 +44,7 @@ include 'scripts/check_session.php';
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                       <a class="dropdown-item" href="#">My Profile <i class="far fa-user"></i></a>
-                      
-                      
+                      <a class="dropdown-item" href="#">My Cash <span class="badge badge-dark"><?php calculateCash(); ?></span></a>
                       <a class="dropdown-item" href="scripts/login.php?logout=1">Logout <i class="fas fa-sign-out-alt"></i></a>
                     </div>
                   </li>
@@ -61,14 +60,23 @@ include 'scripts/check_session.php';
                         <span class="heading-primary">Time Spent Enjoying Yourself, is not Time Wasted!</span>
                     </h3>
                     <div class="row" id="customer-prev">
-                        <div class="col-md-4 col-lg-4 col-sm-4">
-                            <?php include 'scripts/played_games.php';; ?> Played Games
+                        <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+                          <p>
+                            <span class="text text-primary"><?php getPlayedMatches(); ?></span>
+                             P. Games
+                          </p>
                         </div><!--.column-->
-                        <div class="col-md-4 col-lg-4 col-sm-4">
-                            <?php include 'scripts/won_games.php';; ?> Won Games
+                        <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+                          <p>
+                            <span class="text text-success"><?php getWonGames(); ?></span>
+                             W. Games
+                          </p>
                         </div><!--.column-->
-                        <div class="col-md-4 col-lg-4 col-sm-4">
-                            <?php include 'scripts/lost_games.php';; ?> Lost Games
+                        <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
+                          <p>
+                            <span class="text text-danger"><?php getLostGames(); ?></span>
+                             L. Games
+                          </p>
                         </div><!--.column-->
                     </div><!--.row-->
                 </header>
@@ -81,37 +89,7 @@ include 'scripts/check_session.php';
                     </h2>
                     <div class="row">
                         <div class="col-md-10 col-lg-12 col-sm-10">
-                            <!--<table class="table table-dark">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                  </tr>
-                                </tbody>
-                              </table>-->
-                              <?php include 'scripts/recent_games.php'; ?>
+                              <?php showRecWon(); ?>
                         </div>
                     </div>
                 </div><!--recent-games-->
@@ -124,37 +102,7 @@ include 'scripts/check_session.php';
                     </h2>
                     <div class="row">
                         <div class="col-md-10 col-lg-12 col-sm-10">
-                            <!--<table class="table table-dark">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
-                                  </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                  </tr>
-                                </tbody>
-                              </table>-->
-                              <?php include 'scripts/recent_lost.php'; ?>
+                              <?php showRecLost(); ?>
                         </div>
                     </div>
                 </div><!--recent-games-->
@@ -167,38 +115,24 @@ include 'scripts/check_session.php';
                     </h2>
                     <div class="row">
                         <div class="col-md-10 col-lg-12 col-sm-10">
-                            <!--<table class="table table-dark">
-                                <thead>
-                                  <tr>
-                                    <th scope="col">#</th>
-                                    <th scope="col">First</th>
-                                    <th scope="col">Last</th>
-                                    <th scope="col">Handle</th>
+                            <div class="table-responsive">
+                              <table class="table table-dark table-striped" id="multichange">
+                                <caption> <?php echo $disp_name; ?> Recent Transactions</caption>
+                                  <thead class="thead-light">
+                                    <tr>
+                                      <th class="text text-primary" scope='col'>Transactor</th>
+                                      <th class="text text-primary" scope='col'>Amount</th>
+                                      <th class="text text-primary" scope='col'>Reason</th>
+                                      <th class="text text-primary" scope='col'>Date</th>
+                                      <th class='text text-success' scope='col'>Transaction Id</th>
                                   </tr>
-                                </thead>
-                                <tbody>
-                                  <tr>
-                                    <th scope="row">1</th>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>@mdo</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">2</th>
-                                    <td>Jacob</td>
-                                    <td>Thornton</td>
-                                    <td>@fat</td>
-                                  </tr>
-                                  <tr>
-                                    <th scope="row">3</th>
-                                    <td>Larry</td>
-                                    <td>the Bird</td>
-                                    <td>@twitter</td>
-                                  </tr>
-                                </tbody>
-                              </table>-->
-                              <?php include 'scripts/recent_trans.php'; ?>
-                        </div>
+                                  </thead>
+                                  <tbody>
+                                    <?php myRecTrans(); ?>
+                                  </tbody>
+                              </table>
+                            </div><!--.table-responsive-->
+                        </div><!--col-->
                     </div><!--row-->
                 </div><!--recent-txns-->
             </section><!--#fourth-->
