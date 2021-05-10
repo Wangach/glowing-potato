@@ -98,7 +98,7 @@ function showRecWon(){
 		while ($person = mysqli_fetch_assoc($find)) {
 			$aliasName = $person['alias'];
 
-			$wonGames = "SELECT * FROM (SELECT * FROM lmatches WHERE winner = '$aliasName'  ORDER BY id DESC LIMIT 3) as r ORDER BY id";
+			$wonGames = "SELECT * FROM (SELECT * FROM lmatches WHERE winner = '$aliasName'  ORDER BY no DESC LIMIT 3) as r ORDER BY no";
 			$gotMatches = mysqli_query($connect, $wonGames);
 			$calcWon = mysqli_num_rows($gotMatches);
 
@@ -170,7 +170,7 @@ function showRecLost(){
 		while ($person = mysqli_fetch_assoc($find)) {
 			$aliasName = $person['alias'];
 
-			$lostGames = "SELECT * FROM (SELECT * FROM lmatches WHERE looser = '$aliasName'  ORDER BY id DESC LIMIT 3) as r ORDER BY id";
+			$lostGames = "SELECT * FROM (SELECT * FROM lmatches WHERE looser = '$aliasName'  ORDER BY no DESC LIMIT 3) as r ORDER BY no";
 			$gotMatches = mysqli_query($connect, $lostGames);
 			$calcWon = mysqli_num_rows($gotMatches);
 
