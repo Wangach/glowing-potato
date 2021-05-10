@@ -15,7 +15,7 @@ if(isset($_POST['log'])){
 
     	echo $output;
     }else{
-    	$sql = "SELECT * FROM users WHERE username = '$uname' AND pwd = '$pass'";
+    	$sql = "SELECT * FROM users WHERE username = '$uname' AND password = '$pass'";
     	$check = mysqli_query($connect, $sql);
 
     	if (mysqli_num_rows($check) > 0) {
