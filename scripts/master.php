@@ -129,7 +129,7 @@ function showRecWon(){
 								      <th scope='col'>A. Player</th>
 								      <th scope='col'>H. Team</th>
 								      <th scope='col'>A. Team</th>
-								      <th scope='col' class='text text-success'>Looser</th>
+								      <th scope='col' class='text text-success'>Winner</th>
 								      <th scope='col'>Date</th>
 								      <th class='text text-warning' scope='col'>Match Id</th>
 								      

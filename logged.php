@@ -57,7 +57,7 @@ include 'scripts/master.php';
                 <header id="cusHeader">
                     <h3 class="heading">
                         <span class="heading-main">Welcome To BH Entertainment, <?php echo $disp_name; ?></span>
-                        <span class="heading-primary">Time Spent Enjoying Yourself, is not Time Wasted!</span>
+                        <span class="heading-primary">Time Spent Enjoying Yourself, is NEVER Time Wasted!</span>
                     </h3>
                     <div class="row" id="customer-prev">
                         <div class="col-md-4 col-lg-4 col-sm-4 col-xs-4">
@@ -117,7 +117,7 @@ include 'scripts/master.php';
                         <div class="col-md-10 col-lg-12 col-sm-10">
                             <div class="table-responsive">
                               <table class="table table-dark table-striped" id="multichange">
-                                <caption> <?php echo $disp_name; ?> Recent Transactions</caption>
+                                <caption> <?php echo $disp_name; ?>'s Recent Transactions</caption>
                                   <thead class="thead-light">
                                     <tr>
                                       <th class="text text-primary" scope='col'>Transactor</th>
