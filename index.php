@@ -6,7 +6,7 @@ include 'scripts/login.php';
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Broad Horizons Ent | Admin Login </title>
+	<title>Broad Horizons Ent | Customer Login </title>
 	<!--/Precoded CSS files-->
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/fontawesome.css">
